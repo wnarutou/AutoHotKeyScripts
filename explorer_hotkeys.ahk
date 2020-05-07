@@ -27,18 +27,6 @@ Return
             Send, {Up}
 Return
 
-;Use Ctrl+Alt+2 run everything with path parameter current path 
-#Include, explorer.ahk
-~^!2::
-     curpath := Explorer_GetWndCurPath()
-     if %curpath%
-     {
-          if (curpath = A_Desktop)
-               return
-          Run, C:\Program Files\Everything\Everything.exe -path "%curpath%"
-     }
-return 
-
 ;Use Ctrl+h to locate file or directory in current directory
 #Include zh2py.ahk
 ~^h::
